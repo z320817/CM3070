@@ -14,11 +14,12 @@ A convolutional neural network that classifies radio-frequency modulation types 
 | [notebooks/final.ipynb](notebooks/final.ipynb) | End-to-end pipeline: dataset loading, five-channel spectrogram preprocessing, CNN construction, training, and SNR-balanced evaluation. Produces `baseline_cnn.weights.h5`. |
 | [scripts/load-and-normalize.py](scripts/load-and-normalize.py) | Converts a raw GNU Radio `.iq` capture to RadioML's unit-variance frame convention. |
 | [scripts/infer_ota.py](scripts/infer_ota.py) | Loads the trained weights and classifies a normalized `.iq` capture, printing per-frame predictions and a majority vote. |
+| [scripts/measure_capture.py](scripts/measure_capture.py) | Measure capture quality and receiver impairments for the raw OTA I/Q file. |
 | [gnuradio/fm_capture_baseband.grc](gnuradio/fm_capture_baseband.grc) | GNU Radio Companion flowgraph used to capture a 400 kSps baseband FM IQ stream from a HackRF One. Adapted from Clark and Clark (2025) — see attribution note in the file. |
 | [gnuradio/fm_rx.py](gnuradio/fm_rx.py) | GNU Radio Companion-generated Python for the flowgraph above; runnable without opening the GUI. |
-| [docs/hackrf-capture-guide.md](docs/hackrf-capture-guide.md) | Step-by-step hardware/flowgraph setup for reproducing the OTA capture. |
 | `requirements.txt` | Python package dependencies. |
 | `.env.example` | Template for the environment variables needed to download the dataset. |
+| [final-teport.pdf](final-teport.pdf) | Final project report document. |
 
 ## What is *not* included
 
@@ -49,7 +50,7 @@ The pipeline has three stages, run in order:
 Open [notebooks/final.ipynb](notebooks/final.ipynb) and run all cells top-to-bottom. This downloads/loads RadioML 2018.01A, builds the five-channel spectrogram representation, trains the CNN, and saves the best checkpoint to `baseline_cnn.weights.h5` in the working directory. Evaluation plots (confusion matrix, per-class F1, accuracy-vs-SNR) are produced at the end of the notebook.
 
 ### 2. Normalize a real-world capture
-Record a live signal with a HackRF One using [gnuradio/fm_capture_baseband.grc](gnuradio/fm_capture_baseband.grc) (or the equivalent generated [gnuradio/fm_rx.py](gnuradio/fm_rx.py)) — see [docs/hackrf-capture-guide.md](docs/hackrf-capture-guide.md) for the full hardware and flowgraph walkthrough. This produces a raw complex64 `.iq` file, then:
+
 ```bash
 python scripts/load-and-normalize.py <capture.iq> <capture_normalized.iq>
 ```
