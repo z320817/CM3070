@@ -19,7 +19,7 @@ A convolutional neural network that classifies radio-frequency modulation types 
 | [gnuradio/fm_rx.py](gnuradio/fm_rx.py) | GNU Radio Companion-generated Python for the flowgraph above; runnable without opening the GUI. |
 | `requirements.txt` | Python package dependencies. |
 | `.env.example` | Template for the environment variables needed to download the dataset. |
-| [final-teport.pdf](final-teport.pdf) | Final project report document. |
+| [final-report.pdf](final-report.pdf) | Final project report document. |
 
 ## What is *not* included
 
