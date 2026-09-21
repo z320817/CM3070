@@ -2,12 +2,6 @@
 .env
 .kaggle/
 
-# Trained weights and datasets (large binary artifacts)
-*.weights.h5
-*.h5
-*.iq
-data/
-
 # Python
 __pycache__/
 *.pyc
