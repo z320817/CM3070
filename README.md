@@ -11,10 +11,10 @@ A convolutional neural network that classifies radio-frequency modulation types 
 
 | Path | Description |
 |---|---|
-| [notebook/final.ipynb](notebooks/final.ipynb) | End-to-end pipeline: dataset loading, five-channel spectrogram preprocessing, CNN construction, training, and SNR-balanced evaluation. Produces `baseline_cnn.weights.h5`. |
-| [gnuradio/load-and-normalize.py](scripts/load-and-normalize.py) | Converts a raw GNU Radio `.iq` capture to RadioML's unit-variance frame convention. |
-| [gnuradio/infer_ota.py](scripts/infer_ota.py) | Loads the trained weights and classifies a normalized `.iq` capture, printing per-frame predictions and a majority vote. |
-| [gnuradio/measure_capture.py](scripts/measure_capture.py) | Measure capture quality and receiver impairments for the raw OTA I/Q file. |
+| [notebook/final.ipynb](notebook/final.ipynb) | End-to-end pipeline: dataset loading, five-channel spectrogram preprocessing, CNN construction, training, and SNR-balanced evaluation. Produces `baseline_cnn.weights.h5`. |
+| [gnuradio/load-and-normalize.py](gnuradio/load-and-normalize.py) | Converts a raw GNU Radio `.iq` capture to RadioML's unit-variance frame convention. |
+| [gnuradio/infer_ota.py](gnuradio/infer_ota.py) | Loads the trained weights and classifies a normalized `.iq` capture, printing per-frame predictions and a majority vote. |
+| [gnuradio/measure_capture.py](gnuradio/measure_capture.py) | Measure capture quality and receiver impairments for the raw OTA I/Q file. |
 | [gnuradio/fm_capture_baseband.grc](gnuradio/fm_capture_baseband.grc) | GNU Radio Companion flowgraph used to capture a 400 kSps baseband FM IQ stream from a HackRF One. Adapted from Clark and Clark (2025) — see attribution note in the file. |
 | [gnuradio/fm_rx.py](gnuradio/fm_rx.py) | GNU Radio Companion-generated Python for the flowgraph above; runnable without opening the GUI. |
 | `requirements.txt` | Python package dependencies. |
