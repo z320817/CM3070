@@ -16,7 +16,9 @@ A convolutional neural network that classifies radio-frequency modulation types 
 | [gnuradio/infer_ota.py](gnuradio/infer_ota.py) | Loads the trained weights and classifies a normalized `.iq` capture, printing per-frame predictions and a majority vote. |
 | [gnuradio/measure_capture.py](gnuradio/measure_capture.py) | Measure capture quality and receiver impairments for the raw OTA I/Q file. |
 | [gnuradio/fm_capture_baseband.grc](gnuradio/fm_capture_baseband.grc) | GNU Radio Companion flowgraph used to capture a 400 kSps baseband FM IQ stream from a HackRF One. Adapted from Clark and Clark (2025) — see attribution note in the file. |
-| [gnuradio/fm_rx.py](gnuradio/fm_rx.py) | GNU Radio Companion-generated Python for the flowgraph above; runnable without opening the GUI. |
+| [gnuradio/fm-iq.grc](gnuradio/fm-iq.grc) | GNU Radio Companion flowgraph used to play a channelized 400 kSps FM baseband recording FM IQ stream from a HackRF One. Adapted from Clark and Clark (2025) — see attribution note in the file. |
+| [gnuradio/fm_rx.py](gnuradio/fm_rx.py) | GNU Radio Companion-generated Python for the fm_capture_baseband.grc flowgraph, runnable without opening the GUI. |
+| [gnuradio/fm_iq.py](gnuradio/fm_iq.py) | GNU Radio Companion-generated Python for the fm-iq.grc flowgraph, runnable without opening the GUI. |
 | `requirements.txt` | Python package dependencies. |
 | `.env.example` | Template for the environment variables needed to download the dataset. |
 | [final-report.pdf](final-report.pdf) | Final project report document. |
