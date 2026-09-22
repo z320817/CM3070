@@ -5,8 +5,8 @@ import os
 import sys
 import numpy as np
 
-INPUT_FILE  = os.path.expanduser("fm_c96.3M_s400k.iq")
-OUTPUT_FILE = os.path.expanduser("fm_c96.3M_s400k_normalized.iq")
+INPUT_FILE  = os.path.expanduser("fm_c96.3M_s400k/fm_c96.3M_s400k.iq")
+OUTPUT_FILE = os.path.expanduser("fm_c96.3M_s400k/fm_c96.3M_s400k_normalized.iq")
 FRAME_LEN   = 1024  # RadioML 2018.01A frame length
 
 # ── Load ──────────────────────────────────────────────────────────────────────

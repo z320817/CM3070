@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Classify a normalised OTA IQ capture using saved baseline_cnn weights.
 # Usage: python infer_ota.py <normalized.iq> <path/to/baseline_cnn.weights.h5>
-# Example: python infer_ota.py fm_c96.3M_s400k_normalized.iq ../../baseline_cnn.weights.h5
+# Example: python infer_ota.py fm_c96.3M_s400k/fm_c96.3M_s400k_normalized.iq ../baseline_cnn.weights.h5
 
 import os
 import sys

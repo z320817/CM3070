@@ -2,7 +2,7 @@
 # Measure capture quality and receiver impairments for the raw OTA I/Q file.
 # Produces the figures quoted in the report's "The receiver was not the limiting
 # factor" subsection.
-# Usage: python measure_capture.py fm_c96.3M_s400k.iq
+# Usage: python measure_capture.py fm_c96.3M_s400k/fm_c96.3M_s400k.iq
 
 import sys
 import numpy as np
